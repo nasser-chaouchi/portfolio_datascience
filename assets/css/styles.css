@@ -89,14 +89,15 @@ section { padding:2rem 0; display:flex; flex-direction:column; justify-content:c
 #project-container { display:block; min-height:auto; padding-top:2rem; }
 
 .main-offset {
-  padding-top: calc(70px + 3rem); /* 70px = hauteur de ton navbar, + 3rem pour espace */
+  padding-top: 15rem; 
+  padding-bottom: 6rem; 
 }
+
 
 /* ===============================
    RESPONSIVE
 ================================== */
 
-/* Small devices (phones, <768px) */
 @media (max-width: 768px) {
   .hero-title { font-size:2rem; }
   .hero-subtitle { font-size:1.2rem; }
@@ -109,7 +110,6 @@ section { padding:2rem 0; display:flex; flex-direction:column; justify-content:c
   section { min-height:auto; padding:1.5rem 1rem; }
 }
 
-/* Medium devices (tablets, 768px–1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .hero-title { font-size:3rem; }
   .hero-subtitle { font-size:1.5rem; }
@@ -119,7 +119,6 @@ section { padding:2rem 0; display:flex; flex-direction:column; justify-content:c
   section { padding:2rem 1.5rem; min-height:auto; }
 }
 
-/* Large devices (desktops, >1024px) */
 @media (min-width:1025px) {
   section { min-height:100vh; }
   .hero-buttons .btn-custom { min-width:200px; }
