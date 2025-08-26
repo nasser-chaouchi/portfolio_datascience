@@ -1,34 +1,49 @@
-/* RESET & BASE */
+/* ===============================
+   RESET & BASE
+================================== */
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family:'Poppins',sans-serif; background:#FDFDFD; color:#1E2019; line-height:1.6; }
 
-/* NAVBAR */
+/* ===============================
+   NAVBAR
+================================== */
 .navbar-custom { background:#003153; padding:1rem 0; }
 .navbar-brand { font-size:2rem; font-weight:500; color:#FDFDFD !important; }
 .navbar-nav .nav-link { font-size:1.2rem; color:#FDFDFD !important; margin:0 0.5rem; transition:color 0.3s; }
 .navbar-nav .nav-link:hover { color:#FFD500 !important; }
 
-/* HERO */
+/* ===============================
+   HERO
+================================== */
 .hero-section { padding:6rem 0 4rem; text-align:center; }
 .hero-title { font-size:4rem; font-weight:600; line-height:1.2; margin-bottom:2rem; }
 .hero-subtitle { font-size:1.8rem; font-weight:400; color:#587B7F; margin-bottom:2rem; }
 .profile-image { width:250px; height:250px; border-radius:50%; object-fit:cover; margin:0 auto; box-shadow:4px 4px 19px rgba(0,0,0,0.25); }
-.hero-buttons .btn-custom { margin:0.5rem; }
+.hero-buttons { display:flex; flex-wrap:wrap; justify-content:center; gap:0.5rem; }
 
-/* BUTTONS */
+/* ===============================
+   BUTTONS
+================================== */
 .btn-custom {
   background:#754668; color:#fff; border:none; border-radius:21px;
   padding:0.8rem 1.5rem; font-size:1rem; font-weight:500;
   display:inline-block; transition:all 0.3s ease;
 }
 .btn-custom:hover { background:#5a3450; transform:translateY(-2px); color:#fff; }
-.btn-secondary { background:#587B7F; color:#fff; border:none; border-radius:21px; padding:0.6rem 1.2rem; font-size:1rem; font-weight:500; transition:all 0.3s ease; }
+.btn-secondary {
+  background:#003153; color:#fff; border:none; border-radius:21px;
+  padding:0.6rem 1.2rem; font-size:1rem; font-weight:500; transition:all 0.3s ease;
+}
 
-/* TITLES & TEXT */
+/* ===============================
+   TITLES & TEXT
+================================== */
 .section-title { font-size:4rem; font-weight:600; line-height:1.2; margin-bottom:2rem; color:#1E2019; }
 .section-text { font-size:1rem; font-weight:500; color:#587B7F; text-align:justify; }
 
-/* CARDS & FLIP */
+/* ===============================
+   CARDS & FLIP
+================================== */
 .card-flip { perspective:1000px; display:flex; align-items:center; margin-bottom:1rem; position:relative; }
 .card-flip > .card-front, .card-flip > .card-back {
   background:#FDFDFD; border:2px solid #D9D9D9; border-radius:15px;
@@ -48,33 +63,60 @@ body { font-family:'Poppins',sans-serif; background:#FDFDFD; color:#1E2019; line
 .project-card-link { text-decoration:none; color:inherit; display:block; }
 .project-image { max-width:100%; margin-bottom:1rem; border-radius:0.5rem; }
 
-/* FOOTER */
+/* ===============================
+   FOOTER
+================================== */
 .footer-custom { background:#003153; color:#fff; padding:1.5rem 0; text-align:center; font-size:1rem; font-weight:500; }
 .footer-custom a { color:#fff; margin:0 0.8rem; font-size:1.5rem; transition:color 0.3s; }
 .footer-custom a:hover { color:#FFD500; }
 .footer-custom span { display:block; margin-top:0.5rem; font-size:0.9rem; }
 
-/* DIVIDERS */
+/* ===============================
+   DIVIDERS
+================================== */
 .divider { width:60%; height:1px; margin:2rem auto; border:none; background-color:#587B7F; }
 .divider-vertical { width:1px; height:90%; background-color:#587B7F; align-self:stretch; }
 
-/* LOGOS */
+/* ===============================
+   LOGOS
+================================== */
 .company-logo { height:80px; object-fit:contain; display:block; margin:0.5rem auto; max-width:100%; }
 
-/* SECTIONS */
-section { min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding:2rem 0; }
-
-/* PROJECT CONTAINER */
+/* ===============================
+   SECTIONS
+================================== */
+section { padding:2rem 0; display:flex; flex-direction:column; justify-content:center; }
 #project-container { display:block; min-height:auto; padding-top:2rem; }
 
-/* RESPONSIVE */
+/* ===============================
+   RESPONSIVE
+================================== */
+
+/* Small devices (phones, <768px) */
 @media (max-width: 768px) {
   .hero-title { font-size:2rem; }
   .hero-subtitle { font-size:1.2rem; }
   .section-title { font-size:1.5rem; }
   .profile-image { width:150px; height:150px; }
   .btn-custom { padding:0.6rem 1rem; font-size:0.9rem; }
-  .card-flip > .card-front,
-  .card-flip > .card-back { min-height:auto; }
+  .card-flip > .card-front, .card-flip > .card-back { min-height:auto; }
+  .divider-vertical { display:none; }
+  .section-text { text-align:left; }
+  section { min-height:auto; padding:1.5rem 1rem; }
 }
 
+/* Medium devices (tablets, 768px–1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-title { font-size:3rem; }
+  .hero-subtitle { font-size:1.5rem; }
+  .section-title { font-size:2.5rem; }
+  .profile-image { width:200px; height:200px; }
+  .btn-custom { padding:0.7rem 1.2rem; font-size:0.95rem; }
+  section { padding:2rem 1.5rem; min-height:auto; }
+}
+
+/* Large devices (desktops, >1024px) */
+@media (min-width:1025px) {
+  section { min-height:100vh; }
+  .hero-buttons .btn-custom { min-width:200px; }
+}
