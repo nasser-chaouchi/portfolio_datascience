@@ -1,0 +1,159 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "The Movie Recommender System",
+      "text": "This project is an interactive movie recommendation system built with Streamlit, powered by collaborative filtering, content-based filtering, and hybrid algorithms. It leverages datasets of up to 32 million ratings to provide tailored suggestions based on user preferences or selected movies.",
+      "context": {
+        "dataset": "MovieLens 32M",
+        "goal": "Recommend movies users might like, based on behavior and content features",
+        "type": "Hybrid Recommendation System",
+        "methods": ["Collaborative Filtering (ratings)", "Content-Based Filtering (genres, titles)"],
+        "size": {"ratings": "32M+", "users": "~270k", "movies": "62k"}
+      },
+      "approach": {
+        "built_with": ["Scikit-learn", "Pandas", "NumPy", "Seaborn", "Matplotlib", "HuggingFace datasets", "Streamlit"],
+        "data_cleaning": "Merged movies.csv and ratings.csv, extracted year, processed genres",
+        "collaborative_filtering": "Built user-item matrix, applied cosine similarity",
+        "content_based_filtering": "Used TF-IDF/CountVectorizer on genres and titles",
+        "hybrid_strategy": "Combined top recommendations from both approaches",
+        "strategies": [
+          "Most rated movies",
+          "Top-rated by genre",
+          "Top-rated by year",
+          "User-user collaborative hybrid",
+          "Item-item collaborative hybrid"
+        ],
+        "profile_based_recommendation": "Built a user profile from favorite movies to generate personalized suggestions"
+      },
+      "what_i_learned": [
+        "Designing and comparing recommender strategies",
+        "Using similarity metrics (cosine) on sparse data",
+        "Evaluating trade-offs between relevance and diversity"
+      ],
+      "links": {"repository": "https://github.com/nasser-chaouchi/movie_recommender_system", "interface": "https://movielensreco-uwtaqzzda5mvnxh3buwshd.streamlit.app/"},
+      "images": ["assets/images/projects/movie_recommender_system/Interface_Screenshot.png"]    
+    },
+    {
+      "id": 2,
+      "title": "Twitter Sentiment Analysis",
+      "text": "This project focuses on binary sentiment classification of tweets using the Sentiment140 dataset (1.6M tweets). It compares a classical ML baseline (TF-IDF + Naive Bayes) with a state-of-the-art deep learning model (BERT fine-tuning).",
+      "context": {
+        "dataset": "Sentiment140",
+        "goal": "Predict sentiment (positive or negative) from tweets",
+        "type": "Supervised, NLP",
+        "methods": ["Classical Machine Learning", "Deep Learning"],
+        "size": "1.6M labeled tweets (short, noisy, informal text)"
+      },
+      "approach": {
+        "built_with": ["Python", "scikit-learn", "joblib", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Hugging Face Transformers (BERT)", "PyTorch", "Streamlit"],
+        "preprocessing": "Cleaned and normalized tweets (tokenization, lowercasing, removal of emojis, URLs, hashtags)",
+        "baseline_model": "TF-IDF and Naive Bayes, lightweight and interpretable solution for fast text classification",
+        "advanced_model": "BERT fine-tuning with Hugging Face Transformers, leveraging contextual embeddings for higher accuracy",
+        "evaluation": "Accuracy, Macro F1-score, Confusion Matrix, analysis of ambiguous tweets",
+        "deployment": "Real-time sentiment prediction through an interactive Streamlit application",
+        "resources": "Dataset and trained models hosted and shared on Hugging Face Hub"
+      },
+      "what_i_learned": [
+        "Value of preprocessing when working with noisy Twitter data",
+        "Contrast classical ML approaches with state-of-the-art NLP methods",
+        "Trade-off between a simple, fast model (Naive Bayes) and a more complex, accurate one (BERT)",
+        "Best practices for hosting and sharing datasets and models on Hugging Face Hub"
+      ],
+      "links": {"repository": "https://github.com/nasser-chaouchi/twitter_sentiment_analysis", "interface": "https://twittersentimentanalysis-cfhbucvitpghzvnwxt38vi.streamlit.app/"},
+      "images": ["assets/images/projects/twitter_sentiment_analysis/Interface_Screenshot.png"]
+    },
+    {
+      "id": 3,
+      "title": "Dog Breed Classification (CNN)",
+      "text": "This project focuses on image classification of dog breeds using a fine-tuned ResNet18 trained on 15 small dog breeds. It compares a baseline with moderate augmentation against an enhanced augmentation strategy with cosine learning-rate scheduling.",
+      "context": {
+        "dataset": "Stanford Dogs Dataset (subset, ~2000 images, 15 breeds)",
+        "goal": "Build a convolutional neural network to classify dog breeds from images",
+        "type": "Supervised, Image Classification (Deep Learning)",
+        "size": "~2000 labeled images, high intra-class variability"
+      },
+      "approach": {
+        "built_with": ["Python", "PyTorch (ResNet18, Grad-CAM)", "Torchvision (pretrained models, transforms)", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Streamlit"],
+        "data_preprocessing": "Resized images, normalization, data augmentation (rotation, flip, zoom, shift)",
+        "model_architecture": "Fine-tuned ResNet18 with transfer learning",
+        "training_strategy": "Baseline (moderate augmentation) vs Enhanced Augmentation + Cosine LR scheduler",
+        "evaluation": "Accuracy, Macro F1-score, Confusion Matrix, per-class results",
+        "explainability": "Integrated Grad-CAM heatmaps to visualize model decisions",
+        "deployment": "Interactive Streamlit application for predictions and explainability"
+      },
+      "what_i_learned": [
+        "Leveraging transfer learning for limited datasets",
+        "Improving generalization with data augmentation and LR scheduling",
+        "Combining performance metrics with interpretability (Grad-CAM)",
+        "Deploying an end-to-end Computer Vision application"
+      ],
+      "links": {"repository": "https://github.com/nasser-chaouchi/dog_breed_classification_resnet18/tree/main", "interface": "https://dogbreedclassificationresnet18.streamlit.app/"},
+      "images": ["assets/images/projects/dog_breed_classification/Interface_Screenshot.png"]
+    },
+    {
+      "id": 4,
+      "title": "Multiclass Classification for Diabetes",
+      "text": "This project aims to classify patients into three diabetes categories (Non-Diabetic, Diabetic, Pre-Diabetic) based on clinical and biochemical features.",
+      "context": {
+        "dataset": "Multiclass Diabetes Dataset",
+        "goal": "Classify patients into several diabetes stages",
+        "type": "Supervised, Multiclass classification",
+        "size": "264 patients, 12 features"
+      },
+      "approach": {
+        "built_with": ["Scikit-learn", "Pandas", "NumPy", "Seaborn", "Matplotlib", "Streamlit"],
+        "eda_preprocessing": "Analyzed feature distributions, handled missing values, balanced classes, and scaled data",
+        "models_tested": ["Logistic Regression", "Random Forest", "K-Nearest Neighbour"],
+        "cross_validation": "Ensured robust performance and avoided overfitting",
+        "evaluation": "Confusion Matrix, Classification report (F1-Score, Accuracy, Recall)",
+        "final_model": "Random Forest (Accuracy: 97%, Macro F1-score: 0.98)"
+      },
+      "what_i_learned": [
+        "Handling imbalanced multiclass data",
+        "Importance of feature engineering and model tuning",
+        "Model explainability with SHAP or feature importance"
+      ],
+      "links": {"repository": "https://github.com/nasser-chaouchi/multiclass_diabetes_classification", "interface": "https://multiclassdiabetes-vibkpbkqtd7zdhjbmojppp.streamlit.app/"},
+      "images": ["assets/images/projects/multiclass_classification_for_diabetes/Interface_Screenshot.png",
+                "assets/images/projects/multiclass_classification_for_diabetes/image1.png",
+                "assets/images/projects/multiclass_classification_for_diabetes/image2.png",
+                "assets/images/projects/multiclass_classification_for_diabetes/image3.png",
+                "assets/images/projects/multiclass_classification_for_diabetes/image4.png",
+                "assets/images/projects/multiclass_classification_for_diabetes/image5.png",
+                "assets/images/projects/multiclass_classification_for_diabetes/image6.png"
+                ]
+    },
+    {
+      "id": 5,
+      "title": "CKD and Dialysis Prediction",
+      "text": "This project aims to predict Chronic Kidney Disease (CKD) and assess dialysis needs using clinical and biochemical indicators.",
+      "context": {
+        "dataset": "Kidney Disease Risk Dataset",
+        "goal": "Predict CKD status and dialysis need based on clinical and biological data",
+        "type": "Supervised, Binary classification (2 targets: CKD_Status, Dialysis_Needed)",
+        "size": "2304 patients, 9 features"
+      },
+      "approach": {
+        "built_with": ["Scikit-learn", "Pandas", "NumPy", "Seaborn", "Matplotlib", "XGBoost", "Streamlit"],
+        "eda_preprocessing": "Explored feature relationships, handled missing values, encoded categorical data, scaled numerical features",
+        "models_tested": ["Logistic Regression", "Random Forest", "Gradient Boosting", "XGBoost", "K-Nearest Neighbour"],
+        "cross_validation": "Ensured robustness and reduced overfitting risk",
+        "evaluation": "Classification Report, ROC-AUC, F1-Score, Accuracy",
+        "best_model": "Gradient Boosting for performance, Random Forest for generalization (Accuracy CKD_Status: 100%, Dialysis_Needed: Accuracy 100% with F1-Score 0.97)"
+      },
+      "what_i_learned": [
+        "Managing dual target classification",
+        "Handling noisy and medical data",
+        "Improving interpretability with SHAP values"
+      ],
+      "links": {"repository": "https://github.com/nasser-chaouchi/ckd_dialysis_prediction", "interface": "https://kidneydiseaserisk-ztfzun65jllcekaongmccj.streamlit.app/"},
+      "images": ["assets/images/projects/ckd_and_dialysis_prediction/Interface_Screenshot.png",
+                "assets/images/projects/ckd_and_dialysis_prediction/image1.png",
+                "assets/images/projects/ckd_and_dialysis_prediction/image2.png",
+                "assets/images/projects/ckd_and_dialysis_prediction/image3.png",
+                "assets/images/projects/ckd_and_dialysis_prediction/image4.png"
+                ]
+    }
+  ]
+}
