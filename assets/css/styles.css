@@ -2,6 +2,11 @@
    RESET & BASE
 ================================== */
 * { margin:0; padding:0; box-sizing:border-box; }
+
+html {
+  scroll-padding-top: 5rem; /* espace pour navbar fixe */
+}
+
 body { font-family:'Poppins',sans-serif; background:#FDFDFD; color:#1E2019; line-height:1.6; }
 
 /* ===============================
