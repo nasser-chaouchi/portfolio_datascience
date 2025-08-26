@@ -31,7 +31,7 @@
         "Using similarity metrics (cosine) on sparse data",
         "Evaluating trade-offs between relevance and diversity"
       ],
-      "links": {"repository": "https://github.com/nasser-chaouchi/movie_recommender_system", "interface": "https://movielensreco-uwtaqzzda5mvnxh3buwshd.streamlit.app/"},
+      "links": {"repository": "https://github.com/nasser-chaouchi/movie_recommender_system", "interface": "https://movierecommendersystem-qqxh2wfxieni9cftjchdxq.streamlit.app/"},
       "images": ["assets/images/projects/movie_recommender_system/Interface_Screenshot.png"]    
     },
     {
