@@ -86,7 +86,8 @@ body { font-family:'Poppins',sans-serif; background:#FDFDFD; color:#1E2019; line
 
 .card-title { font-size:clamp(1rem,2.5vw,1.2rem); font-weight:600; color:#754668; margin-bottom:0.5rem; }
 .card-text { font-size:clamp(0.9rem,2vw,1rem); font-weight:500; color:#587B7F; }
-.experience-card { background:#FDFDFD; border:2px solid #D9D9D9; border-radius:15px; padding:clamp(0.5rem,1vw,0.8rem) clamp(0.8rem,1.5vw,1rem); margin-bottom:0.5rem; min-height:50px; text-align:center; color:#587B7F; transition:transform 0.3s ease; }
+.about-card { background:#FDFDFD; border:2px solid #D9D9D9; border-radius:15px; padding:clamp(0.5rem,1vw,0.8rem) clamp(0.8rem,1.5vw,1rem); margin-bottom:0.5rem; min-height:50px; text-align:center; color:#587B7F; transition:transform 0.3s ease; }
+.experience-card { background:#FDFDFD; border:2px solid #D9D9D9; border-radius:15px; padding:clamp(0.5rem,1vw,0.8rem) clamp(0.8rem,1.5vw,1rem); margin-bottom:0.5rem; min-height:50px; text-align:center; color:#754668; transition:transform 0.3s ease; font-weight: bold;}
 .experience-card:hover { transform:translateY(-5px); }
 
 .project-card-link { text-decoration:none; color:inherit; display:block; }
@@ -103,8 +104,21 @@ body { font-family:'Poppins',sans-serif; background:#FDFDFD; color:#1E2019; line
 /* ===============================
    DIVIDERS
 ================================== */
-.divider { width:60%; height:1px; margin:2rem auto; border:none; background-color:#587B7F; }
-.divider-vertical { width:1px; height:90%; background-color:#587B7F; align-self:stretch; }
+.divider { 
+  width: 60%; 
+  height: 2px; 
+  margin: 2rem auto; 
+  border: none; 
+  background-color: #003153; 
+}
+
+.divider-vertical {
+  width: 0.5px;
+  height: 90%;
+  background-color: #003153;
+  transform: scaleX(0.5); 
+  margin: 0 auto;
+}
 
 /* ===============================
    LOGOS

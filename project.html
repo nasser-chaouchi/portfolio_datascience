@@ -65,7 +65,26 @@
               return `<li class="list-group-item"><strong>${k.replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase())}:</strong> ${val}</li>`;
             }).join('') + '</ul>';
 
-          const contextHtml = buildList(project.context);
+          function buildContextList(context) {
+            const items = [];
+
+            if (context.dataset) {
+              let val = context.dataset;
+              if (context.link_dataset) {
+                val = `<a href="${context.link_dataset}" target="_blank">${context.dataset}</a>`;
+              }
+              items.push(`<li class="list-group-item"><strong>Dataset:</strong> ${val}</li>`);
+            }
+
+            if (context.goal) items.push(`<li class="list-group-item"><strong>Goal:</strong> ${context.goal}</li>`);
+            if (context.type) items.push(`<li class="list-group-item"><strong>Type:</strong> ${context.type}</li>`);
+            if (context.size) items.push(`<li class="list-group-item"><strong>Size:</strong> ${context.size}</li>`);
+
+            return `<ul class="list-group mb-3">${items.join('')}</ul>`;
+          }
+
+          const contextHtml = buildContextList(project.context);
+
           const approachHtml = buildList(project.approach);
           const learnedHtml = `<ul class="list-group mb-3">${project.what_i_learned.map(l => `<li class="list-group-item">${l}</li>`).join('')}</ul>`;
           const imagesHtml = project.images && project.images.length ? `
