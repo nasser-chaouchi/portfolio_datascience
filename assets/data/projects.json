@@ -10,7 +10,7 @@
         "goal": "Recommend movies users might like, based on behavior and content features.",
         "type": "Hybrid Recommendation System",
         "methods": ["Collaborative Filtering (ratings)", "Content-Based Filtering (genres, titles)."],
-        "size": {"ratings": "32M+", "users": "~270k", "movies": "62k"}
+        "size": "Ratings (32M+), Users (~270k), Movies (62k)."
       },
       "approach": {
         "built_with": ["Scikit-learn", "Pandas", "NumPy", "Seaborn", "Matplotlib", "HuggingFace datasets", "Streamlit."],
